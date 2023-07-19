@@ -1,0 +1,30 @@
+{
+  "$id": "name-schema",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "name": "Name schema",
+  "description": "A schema capturing a human name",
+  "type": "object",
+  "properties": {
+    "credentialSubject": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "object",
+          "properties": {
+            "firstName": {
+              "type": "string"
+            },
+            "lastName": {
+              "type": "string"
+            },
+            "additionalProperties": false
+          },
+          "required": [
+            "firstName",
+            "lastName"
+          ]
+        }
+      }
+    }
+  }
+}
